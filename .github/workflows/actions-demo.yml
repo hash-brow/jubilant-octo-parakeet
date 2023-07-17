@@ -19,7 +19,7 @@ jobs:
       - name: Get changed directories
         id: changed-dirs
         run: |
-          git diff --name-only HEAD^..HEAD > changed_files.txt
+          git diff-tree --no-commit-id --name-only -r HEAD > changed_files.txt
           cat changed_files.txt | cut -d'/' -f1 | sort -u > changed_dirs.txt
 
       - name: Run actions for changed directories

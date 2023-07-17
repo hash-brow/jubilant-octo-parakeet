@@ -24,7 +24,7 @@ jobs:
 
       - name: Run actions for changed directories
         run: |
-          echo "here"
+          cat changed_dirs.txt
           while IFS= read -r dir; do
             echo "Processing $dir"
             # Run your desired action logic for each directory here

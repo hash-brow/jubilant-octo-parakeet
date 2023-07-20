@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo "Making problem #$1"
+mkdir $1
+cp -R ./skeleton/* ./$1

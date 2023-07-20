@@ -1,0 +1,8 @@
+{
+	"lang" : "",
+	"name" : "",
+    "legend" : "",
+    "input" : "",
+    "output" : "",
+    "notes" : "",
+}

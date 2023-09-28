@@ -89,7 +89,13 @@ func setStatement(api polygon.PolygonApi, fileName string) (err error) {
 	}{}
 
 	data, err := os.ReadFile(fileName)
+	if err != nil {
+		fmt.Printf("Error while reading statement {%s}\n", err)	
+	}
 	err = json.Unmarshal(data, &wrapper)
+	if err != nil {
+		fmt.Printf("Error while unmarshalling statement {%s}\n", err)
+	}
 
 	parameters := make(map[string]string)
 
@@ -216,7 +222,7 @@ func setSolution(api polygon.PolygonApi, fileName string) (err error) {
 }
 
 func makeProblem(api polygon.PolygonApi, problemId string) (err error) {
-	err = setGenInfo(api, string("./"+problemId+"/info.txt"))
+	err = setGenInfo(api, string(problemId+"/info.txt"))
 	if err != nil {
 		fmt.Printf("Error while setting general info {%s}\n", err)
 	}

@@ -4,5 +4,5 @@
     "legend" : "",
     "input" : "",
     "output" : "",
-    "notes" : "",
+    "notes" : ""
 }
